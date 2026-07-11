@@ -1,0 +1,18 @@
+services:
+  - type: worker
+    name: gold-ema-telegram-alert
+    runtime: docker
+    plan: starter
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_CHAT_ID
+        sync: false
+      - key: SYMBOL
+        value: XAUUSD=X
+      - key: INTERVAL
+        value: 1h
+      - key: EMA_PERIOD
+        value: 20
+      - key: CHECK_EVERY_SECONDS
+        value: 300
