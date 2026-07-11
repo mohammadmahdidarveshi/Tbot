@@ -2,7 +2,7 @@ services:
   - type: worker
     name: gold-ema-telegram-alert
     runtime: docker
-    plan: starter
+    plan: free
     envVars:
       - key: TELEGRAM_BOT_TOKEN
         sync: false
